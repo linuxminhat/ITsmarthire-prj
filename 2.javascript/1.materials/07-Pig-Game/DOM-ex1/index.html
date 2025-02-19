@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Tìm kiếm - freetuts.net</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <style>
+        #search_advance {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Tìm kiếm dữ liệu</h1>
+    <table border="1" cellspacing="0" cellpadding="5">
+        <tr>
+            <td>Nhập tiêu đề</td>
+            <td>
+                <input type="text" id="title" value="" /> <br />
+                <a href="#" id="show_search_advance">Tìm kiếm nâng cao</a>
+            </td>
+        </tr>
+        <tr id="search_advance">
+            <td>Chọn chuyên mục</td>
+            <td>
+                <select id="category">
+                    <option value="1">PHP</option>
+                    <option value="2">Javascript</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <input type="button" id="btn_search" value="Tìm kiếm" />
+            </td>
+        </tr>
+    </table>
+    <script src="script.js"></script>
+</body>
+
+
+</html>
