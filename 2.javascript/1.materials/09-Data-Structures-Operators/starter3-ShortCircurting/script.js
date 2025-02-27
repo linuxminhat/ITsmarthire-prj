@@ -72,28 +72,6 @@ const sumOfInfinitive = function (...numbers) {
 };
 sumOfInfinitive(1, 2, 3);
 
-console.log(3 || 'Jonas') //3
-console.log('' || 'Jonas')//Jonas
-console.log(true || 0) //true
-console.log(undefined || null) // null
-
-restaurant.numGuest = 0;
-const guests = restaurant.numGuest || 10;
-console.log(guests);
-
-//Logical Assignment Operators 
-const rest1 = {
-  name: 'Capri',
-  numGuest: 20,
-};
-const rest2 = {
-  name: 'La Pia',
-  owner: 'Giovanni Rossi',
-};
-rest2.numbGuest = rest1.numGuest || 10;//20
-console.log(rest2);
-rest1.numGuest ||= 10;
-rest2.numGuest ||= 10;
 
 
 

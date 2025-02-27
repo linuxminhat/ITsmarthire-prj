@@ -70,6 +70,8 @@ console.log(a, b);
 restaurant.orderDelivery({
   time: '22:22',
   address: '35 Dang Dung, Phuong Hoa Khanh Bac, Da Nang',
+  mainIndex: 2,
+  starterIndex: 2,
 })
 
 
