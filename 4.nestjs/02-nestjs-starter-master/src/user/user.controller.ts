@@ -1,14 +1,13 @@
-import { Controller, Get, Delete } from '@nestjs/common';
-
+import { Controller, Delete, Get } from '@nestjs/common';
 @Controller('user')
 export class UserController {
   @Get()
   findAll(): string {
-    return "This action return all user";
+    return "This action will return all user"
   }
-
   @Delete("/by-id")
   findById(): string {
-    return "This action will delete a user by id";
+    return "This action will delete a user by id"
   }
+
 }
