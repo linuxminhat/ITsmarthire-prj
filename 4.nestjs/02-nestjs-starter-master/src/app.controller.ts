@@ -1,14 +1,39 @@
-//Noi xu li cac yeu cau HTTP va tra ve cac phan hoi
-//Chinh tai noi nay se dinh nghia cac route cua ung dung
-import { Controller, Get } from '@nestjs/common';
-import { AppService } from './app.service';
 
+// import { Controller, Get } from '@nestjs/common';
+// import { AppService } from './app.service';
+
+// @Controller()
+// export class AppController {
+//   constructor(private readonly appService: AppService) { }
+
+//   @Get()
+//   getHello(): string {
+//     return this.appService.getHello();
+//   }
+// }
+// import { Get, Controller, Render } from '@nestjs/common';
+// @Controller()
+// export class AppController {
+//   @Get()
+//   @Render('views')
+//   root() {
+//     return { message: 'Hello World!' };
+//   }
+// }
+import { Get, Controller, Render } from '@nestjs/common';
+import { AppService } from './app.service';
+import { ConfigService } from '@nestjs/config';
 @Controller()
 export class AppController {
-  constructor(private readonly appService: AppService) { }
+  //port from .env
 
+  constructor(private readonly appService: AppService, private configService: ConfigService) { }
   @Get()
-  getHello(): string {
-    return this.appService.getHello();
+  @Render('views')
+  root() {
+    console.log(">>check port=", this.configService.get<string>('PORT'));
+    console.log(">>port", this.configService.get<String>('PORT'));
+
+    return { message: "Hello Worlds" };
   }
 }
