@@ -9,15 +9,11 @@ export class UsersController {
   constructor(private readonly usersService: UsersService) { }
 
   @Post('')// empty POST: create a new data
+  //Body have get data in HTTP request
   create(
-    @Body("email") email: string, //const email : string  = req.body.email
-    @Body("password") password: string,
-    @Body("name") name: string,
-
+    @Body() createUserDto: CreateUserDto
   ) {
-    return this.usersService.create(email, password, name);
-    // return this.usersService.create(createUserDto);
-    //const myEmail : string = req.body.email //string
+    return this.usersService.create(createUserDto);
   }
 
   @Get()
